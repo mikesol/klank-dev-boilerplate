@@ -158,12 +158,9 @@ let additions = {
       , version =
           "main"
       },
-          typelevel-klank-dev =
+    typelevel-klank-dev =
       { dependencies =
           [ "audio-behaviors"
-            , "console"
-            , "effect"
-            , "psci-support"
           ]
       , repo =
           "https://github.com/mikesol/type.klank.dev.git"
@@ -171,6 +168,7 @@ let additions = {
           "main"
       }
 
+      
 }
 
 in  upstream // overrides // additions
