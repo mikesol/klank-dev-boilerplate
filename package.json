@@ -1,9 +1,10 @@
 {
   "name": "klank-dev-boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "This is a minimal boilerplate for an IDE session where you can develop audio scenes for klank.dev. It has the required dependencies in [spago.dhall](./spago.dhall) as well as the relevant additions in [packages.dhall](./packages.dhall). The file [src/Main.purs](./src/Main.purs) has a minimalistic audio scene.",
   "main": "index.js",
   "scripts": {
+    "postinstall": "spago install && spago build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,8 @@
   },
   "homepage": "https://github.com/mikesol/klank-dev-boilerplate#readme",
   "devDependencies": {
-    "purty": "^6.2.0"
+    "purescript": "^0.13.8",
+    "purty": "^6.2.0",
+    "spago": "^0.16.0"
   }
 }
