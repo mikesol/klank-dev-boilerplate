@@ -3,16 +3,14 @@ module Klank.Dev where
 import Prelude
 import Data.Typelevel.Num (D1)
 import FRP.Behavior (Behavior)
-import FRP.Behavior.Audio
-  ( AudioUnit
-  , gain'
-  , runInBrowser
-  , sinOsc
-  , squareOsc
-  , speaker'
-  )
+import FRP.Behavior.Audio (AudioUnit, gain', runInBrowser, sinOsc, speaker')
+import Type.Klank.Dev (Klank, klank)
 
 scene :: Number -> Behavior (AudioUnit D1)
-scene _ = pure (speaker' (gain' 0.2 (squareOsc 40.0)))
+scene _ = pure (speaker' (gain' 0.2 (sinOsc 440.0)))
 
-main = runInBrowser scene
+main :: Klank
+main =
+  klank
+    { run = runInBrowser scene
+    }
