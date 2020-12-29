@@ -8,6 +8,7 @@ You can edit this file as you like.
   , "audio-behaviors"
   , "canvas"
   , "console"
+  , "klank-dev-util"
   , "drawing"
   , "effect"
   , "psci-support"
